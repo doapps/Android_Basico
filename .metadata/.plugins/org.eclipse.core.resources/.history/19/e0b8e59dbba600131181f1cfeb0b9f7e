@@ -1,0 +1,38 @@
+package com.doapps.me.sesion01;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class Login extends Activity{
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.login_layout);
+
+		context2 = Login.this;
+
+		//elemnetos de layout
+		btnLogin = (Button)findViewById(R.id.btn_login);
+		txtUser = (EditText)findViewById(R.id.txtUser);
+		txtPass = (EditText)findViewById(R.id.txtPass);
+
+
+		btnSend.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				TareaWSInsertar tarea = new TareaWSInsertar(context2);
+				String[] datos = {editTextNombres.getText().toString(),
+						editTextApellidos.getText().toString(),
+						editTextNick.getText().toString(),
+						editTextMail.getText().toString(),
+						editTextSexo.getText().toString(),
+						editTextPais.getText().toString(),
+						editTextFacebook.getText().toString() };
+				tarea.execute(datos);
+				//textViewSms.setText("enviado");
+			}
+		});
+	}
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  colores de la app timber -->
+    <color name="turqoise">#1abc9c</color>
+    <color name="esmerald">#2ecc71</color>
+    <color name="peter_river">#3498db</color>
+    <color name="carrot">#e67e22</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>
